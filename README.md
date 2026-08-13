@@ -11,4 +11,4 @@ Create an isolated Kali VM
 Configure networking for host-only testing
 Verify services and connectivity
 
-
+Please read the KaliLin.md file for the the instructions as well as a link to video on youtube
