@@ -1,6 +1,5 @@
 # Networkwalks-B082-week1-Cybersecurity-lab-setup
-This is a beginners step by step guide to set up a Kali linux virtual machine 
-
+This is a
 Kali VM tutorial — Step-by-step lab setup
 This repository contains a beginner-friendly walkthrough for installing and configuring a Kali Linux VM for lab work. 
 
