@@ -96,3 +96,63 @@ You can watch the full video tutorial here:
 - Verify network connectivity by running:
   ```bash
   sudo nmcli connection modify "Wired connection 1" ipv4.dad-timeout 0
+
+  ## Network Configuration and Verification
+
+1. Double click on the network connection icon in Kali Linux.
+2. Go to **IPv4 Settings**.
+3. Manually create the IP address and gateway according to your NAT network settings.
+4. Manually set the DNS server to either `10.0.0.1` or Google's DNS `8.8.8.8`.
+5. Test internet connectivity by pinging a website, for example:
+   ```bash
+   ping google.com
+6. NAT networking should allow internet access through your host machine.
+
+# Creating a Snapshot in VirtualBox
+
+Snapshots allow you to save the current state of your VM and revert back if needed.
+
+## Step 1: Open VirtualBox and Select Your VM
+- Launch VirtualBox.
+- In the list of virtual machines, click to select your Kali Linux VM (or any VM you want to snapshot).
+
+## Step 2: Open the Snapshots Pane
+- With the VM selected, click on the **Snapshots** button located at the top right of the VirtualBox window (camera icon).
+- Alternatively, right-click the VM and select **Snapshots** from the context menu.
+
+## Step 3: Create a New Snapshot
+- In the Snapshots pane, click the **Take** button (camera icon with a plus sign).
+- A dialog box will appear asking for:
+  - **Name:** Enter a descriptive name for the snapshot (e.g., "Clean Install" or "Before Update").
+  - **Description (optional):** Add details about the snapshot for future reference.
+
+## Step 4: Confirm Snapshot Creation
+- Click **OK** to create the snapshot.
+- VirtualBox will save the current state of the VM. This may take a few moments depending on the VM size and state.
+
+## Step 5: Using Snapshots Later
+- To revert to a snapshot, open the Snapshots pane, select the snapshot you want, and click **Restore**.
+- You can also delete snapshots to free up disk space by selecting a snapshot and clicking the **Delete** button.
+
+---
+
+# Summary Table
+
+| Step | Action                   | Details / Notes                      |
+|-------|-------------------------|------------------------------------|
+| 1     | Download & install VirtualBox | From official site, follow installer |
+| 2     | Download Kali Linux ISO  | From official Kali website          |
+| 3     | Create new VM            | Name, OS type/version, RAM, disk   |
+| 4     | Configure network        | Set Adapter 1 to NAT                |
+| 5     | Mount ISO & start VM     | Attach Kali ISO, boot VM            |
+| 6     | Install Kali Linux       | Follow installer prompts            |
+| 7     | Remove ISO & reboot      | Remove ISO, boot from virtual disk |
+| 8     | Verify network           | Test internet connectivity in VM   |
+| 9     | Create a snapshot        | Creating a snapshot/save point for the VM |
+
+   
+
+   
+   
+
+
